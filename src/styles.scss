@@ -1,0 +1,146 @@
+$bg-color: #ffffff;
+$text-color: #000000;
+
+body.dark {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: $bg-color;
+  color: $text-color;
+}
+
+.BC {
+  margin: 0;
+  background-image: url('BC_MainPage.jpg');
+  height: 936px;
+  /*если компоненты появятся в самом конце страницы - эту строчку можно будет убрат*/;
+}
+
+.body {
+  font-size: 16px;
+  font-family: monospace;
+  color: rgb(0, 0, 0);
+}
+
+.buttonAL {
+  cursor: pointer;
+  font-size: 56px;
+  background: none;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 50px;
+  margin-left: 30px;
+}
+
+.buttonAL::after {
+  content: '';
+  position:absolute;
+  top: 110px;
+  left: 40px;
+  width: 210px;
+  height: 6px;
+  background-color: rgb(155, 193, 236);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-out;
+}
+
+.buttonAL:active::after {
+  transform:scaleX(1);
+}
+
+.buttonGE {
+  cursor: pointer;
+  font-size: 56px;
+  background: none;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.buttonGE::after {
+  content: '';
+  position:absolute;
+  top: 110px;
+  left: 300px;
+  width: 260px;
+  height: 6px;
+  background-color: rgb(155, 193, 236);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-out;
+}
+
+.buttonGE:active::after {
+  transform:scaleX(1);
+}
+
+/* Контейнер для выравнивания */
+.search-container {
+  position:absolute;
+  top: 60px;
+  right: 70px;
+}
+
+/* Стилизация самого поля ввода */
+.search-input {
+  padding: 10px 15px;
+  width: 300px;
+  border: 2px solid #ccc;
+  /* Рамка */
+  border-radius: 20px 0 0 20px;
+  /* Скругление слева */
+  outline: none;
+  /* Убрать стандартную обводку */
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+/* Эффект при фокусе */
+.search-input:focus {
+    background-color: rgb(236, 236, 236);
+  /* Цвет при клике */;
+}
+
+/* Стилизация кнопки */
+.search-button {
+  padding: 10px 20px;
+  background-color: #000000;
+  /* Цвет фона */
+  color: white;
+  border: none;
+  border-radius: 0 2px 20px 0;
+  /* Скругление справа */
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-button:hover {
+  background-color: #818181;
+  /* Цвет при наведении */;
+}
+
+.bottom-right {
+  position:absolute;
+  top:500px;
+  right: 140px;
+  border: #fdffec;
+}
+
+
+.myCustomLink {
+  position:relative;
+  top: 100px;
+  padding-left: 61px;
+  color: #333; // Укажите желаемый цвет текста
+  font-size: 36px; // Измените размер шрифта
+  text-decoration: none; // Убираем подчеркивание
+
+  &:hover {
+    color: #686868; // Цвет при наведении (опционально)
+    text-decoration: underline; // Возвращаем подчеркивание при наведении (опционально)
+  }
+}
