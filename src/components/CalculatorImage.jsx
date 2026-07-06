@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
 function ImageToggler() {
-  const [currentImage, setCurrentImage] = useState('./src/calculate.png');
+  const [currentImage, setCurrentImage] = useState('./src/assets/calculate.png');
 
   const handleClick = () => {
-    setCurrentImage('./src/calculate_glowing.png');
+    setCurrentImage('./src/assets/calculate_glowing.png');
   };
 
   return (
