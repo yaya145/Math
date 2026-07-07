@@ -1,4 +1,4 @@
-$bg-color: #ffffff;
+$bg-color: rgb(16, 33, 52);
 $text-color: #000000;
 
 body.dark {
@@ -11,20 +11,13 @@ body {
   color: $text-color;
 }
 
-.BC {
-  margin: 0;
-  background-image: url('assets/BC_MainPage.jpg');
-  height: 936px;
-  /*если компоненты появятся в самом конце страницы - эту строчку можно будет убрат*/;
-}
-
 .body {
   font-size: 16px;
   font-family: monospace;
   color: rgb(0, 0, 0);
 }
 
-.buttonAL {
+/*.buttonBASE {
   cursor: pointer;
   font-size: 56px;
   background: none;
@@ -35,7 +28,7 @@ body {
   margin-left: 30px;
 }
 
-.buttonAL::after {
+.buttonBASE::after {
   content: '';
   position:absolute;
   top: 110px;
@@ -48,11 +41,11 @@ body {
   transition: transform 0.3s ease-out;
 }
 
-.buttonAL:active::after {
+.buttonBASE:active::after {
   transform:scaleX(1);
 }
 
-.buttonGE {
+.buttonSPEC {
   cursor: pointer;
   font-size: 56px;
   background: none;
@@ -61,7 +54,7 @@ body {
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-.buttonGE::after {
+.buttonSPEC::after {
   content: '';
   position:absolute;
   top: 110px;
@@ -74,7 +67,7 @@ body {
   transition: transform 0.3s ease-out;
 }
 
-.buttonGE:active::after {
+.buttonSPEC:active::after {
   transform:scaleX(1);
 }
 
@@ -125,22 +118,54 @@ body {
 
 .bottom-right {
   position:absolute;
-  top:500px;
-  right: 140px;
+  top:200px;
+  right: 210px;
   border: #fdffec;
 }
 
-
 .myCustomLink {
   position:relative;
-  top: 100px;
-  padding-left: 61px;
-  color: #333; // Укажите желаемый цвет текста
-  font-size: 36px; // Измените размер шрифта
+  top: 600px;
+  left: 300px;
+  color: #ffffff; // Укажите желаемый цвет текста
+  font-size: 52px; // Измените размер шрифта
   text-decoration: none; // Убираем подчеркивание
+  font-family: Georgia, 'Times New Roman', Times, serif;
 
   &:hover {
-    color: #686868; // Цвет при наведении (опционально)
-    text-decoration: underline; // Возвращаем подчеркивание при наведении (опционально)
+    color: #ffffff; // Цвет при наведении (опционально)
+    //text-decoration: underline; 
   }
+}
+
+.myCustomLink1 {
+  position:relative;
+  top: 540px;
+  left: 1000px;
+  color: #ffffff; // Укажите желаемый цвет текста
+  font-size: 52px; // Измените размер шрифта
+  text-decoration: none; // Убираем подчеркивание
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+  &:hover {
+    color: #ffffff; // Цвет при наведении (опционально)
+    //text-decoration: underline; 
+  }
+}
+
+.header {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+
+.bubbleBottom {
+  top: 100px;
+  corner-left-shape: 500px;
+} //для
+
+.bubbleTop {
+  top: 1px;
+  right: auto;
 }

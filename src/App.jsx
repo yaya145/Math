@@ -1,6 +1,7 @@
-import AlgebraButton from "./components/AlgebraButton";
-import GeometryButton from "./components/GeometryButton";
+import BubbleBottom from "./components/BubbleEffectsBottom1";
+import BubbleTop from "./components/BubbleEffectsTop";
 import SearchForm from "./components/SearchForm";
+import Header from "./components/Header";
 import ImageToggler from "./components/CalculatorImage";
 import Router from './Router';
 import TaskPage from './pages/TaskPage1'
@@ -9,10 +10,10 @@ import TasksPage from './pages/TasksPage';
 function Body() {
   return (
    <div>
-     <AlgebraButton />
-     <GeometryButton />
      <Router />
-     <SearchForm />
+     <BubbleBottom />
+     <BubbleTop />
+     <Header />
      <ImageToggler />
     </div>
   );
@@ -20,9 +21,7 @@ function Body() {
 
 export default function MyApp() {
   return (
-  <div className="BC">
     <Body />
-  </div>
   );
 }
 
