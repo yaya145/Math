@@ -130,10 +130,9 @@ body {
   color: #ffffff; // Укажите желаемый цвет текста
   font-size: 52px; // Измените размер шрифта
   text-decoration: none; // Убираем подчеркивание
-  font-family: Georgia, 'Times New Roman', Times, serif;
-
+  font-family:'Trebuchet MS';
   &:hover {
-    color: #ffffff; // Цвет при наведении (опционально)
+    color: #69b6ff; // Цвет при наведении (опционально)
     //text-decoration: underline; 
   }
 }
@@ -145,10 +144,10 @@ body {
   color: #ffffff; // Укажите желаемый цвет текста
   font-size: 52px; // Измените размер шрифта
   text-decoration: none; // Убираем подчеркивание
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: "Trebuchet MS";
 
   &:hover {
-    color: #ffffff; // Цвет при наведении (опционально)
+    color: #69b6ff; // Цвет при наведении (опционально)
     //text-decoration: underline; 
   }
 }
@@ -159,13 +158,34 @@ body {
   right: 0px;
 }
 
-
 .bubbleBottom {
-  top: 100px;
-  corner-left-shape: 500px;
-} //для
+  position:absolute;
+  top: 10px;
+  right: 10px;
+} 
 
 .bubbleTop {
-  top: 1px;
-  right: auto;
+  position:absolute;
+  left:570px;
+
+}
+
+.line {
+  position:absolute;
+  top: 150px;
+  left: 100px;
+}
+
+.main-text {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Verdana';
+    color: #ffffff;
+    position:absolute;
+    top: 205px;
+    left: 210px;
+}
+
+& main-text-down {
+  color: #9cd4ff;
 }

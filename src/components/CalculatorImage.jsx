@@ -9,10 +9,12 @@ function ImageToggler() {
 
   return (
     <div className='bottom-right'>
-      <img onClick={handleClick}
-        style={{ cursor: 'pointer'}} 
+      <img 
         src={currentImage} 
-        alt="Переключаемая картинка" 
+        onClick={handleClick}
+        onMouseEnter={() => setCurrentImage('./src/assets/calc_light.webp')}
+        onMouseLeave={() => setCurrentImage('./src/assets/calc.webp')}
+        style={{ cursor: 'pointer'}} 
       />
     </div>
   );
