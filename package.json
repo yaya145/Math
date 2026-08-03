@@ -14,7 +14,6 @@
     "web-vitals": "5.2.0"
   },
   "scripts": {
-    "install": "pnpm install",
     "start": "vite",
     "build": "vite build",
     "serve": "vite preview"
