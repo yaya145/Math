@@ -6,4 +6,4 @@ function Line() {
     )
 }
 
-export default Line; 
+export default Line;

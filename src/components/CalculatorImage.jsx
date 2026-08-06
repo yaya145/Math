@@ -8,7 +8,7 @@ function ImageToggler() {
   };
 
   return (
-    <div className='bottom-right'>
+    <div className='calc'>
       <img 
         src={currentImage} 
         onClick={handleClick}
