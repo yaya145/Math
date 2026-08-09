@@ -8,7 +8,6 @@ import Table from "./components/Table";
 import Router from './Router';
 import TaskPage from './pages/TaskPage1';
 import TasksPage from './pages/TasksPage';
-import MainText from "./components/MainText";
 
 function Body() {
   return (
@@ -17,7 +16,6 @@ function Body() {
      <BubbleBottom />
      <ImageLightUp />
      <Line />
-     <MainText />
      <Header />
      <SearchForm />
      <Table />

@@ -1,9 +1,6 @@
 function BubbleBottom() {
     return (
-        <div className="bubbleBottom">
-            <img src= "src/assets/bubbles.webp"/>
-        </div>
-        
+        <img src= "src/assets/bubbles.webp" className="bubbleBottom"/>       
     )
 }
 

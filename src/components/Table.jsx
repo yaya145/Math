@@ -6,7 +6,7 @@ function Table() {
          <p className="base-part-description">Изучайте базовую часть<br></br>ЕГЭ бесплатно.</p>
          <p className="profile-part-description">Изучайте профильную часть<br></br>ЕГЭ бесплатно.</p>
 
-         <p className="base-part-notes">•Изучайте базовую<br></br>ЕГЭ бесплатно...</p>
+         <p className="base-part-notes">•Изучайте базовую<br></br>ЕГЭ бесплатно.</p>
          <p className="profile-part-notes">•Изучайте профильную часть<br></br>ЕГЭ бесплатно.</p>
         </>
     )

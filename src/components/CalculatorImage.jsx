@@ -20,5 +20,5 @@ function ImageToggler() {
   );
 }
 
-export default ImageToggler; 
+export default ImageToggler;
 

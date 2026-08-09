@@ -3,7 +3,7 @@ function Header() {
         <div className="header">
             <img src= "src/assets/header_line.webp"/>
             <div className="normal-text">
-            Math.ru
+            Lovingmath.ru
             </div>
         </div>
     )
