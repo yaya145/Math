@@ -24,7 +24,7 @@ import { Link } from "../Router";
 
 function ImageToggler() {
   return (
-<Link to="/tasks/1">
+<Link to="/tasks/123">
   <div className='calc-container'>
     <img src="./src/assets/calc.webp" className="calc" />
   </div>
