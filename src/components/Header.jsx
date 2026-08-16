@@ -5,6 +5,9 @@ function Header() {
             <div className="normal-text">
             Lovingmath.ru
             </div>
+            <div className="normal-text2">
+            • Все права защищены @Copyright
+            </div>
         </div>
     )
 }

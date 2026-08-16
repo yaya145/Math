@@ -1,13 +1,31 @@
 function Table() {
     return (
         <>
-         <img src= "src/assets/table.webp" className="table"/>
+         <img src= "src/assets/table_.webp" className="table_"/>
 
          <p className="base-part-description">Изучайте базовую часть<br></br>ЕГЭ бесплатно.</p>
          <p className="profile-part-description">Изучайте профильную часть<br></br>ЕГЭ бесплатно.</p>
 
-         <p className="base-part-notes">•Изучайте базовую<br></br>ЕГЭ бесплатно.</p>
-         <p className="profile-part-notes">•Изучайте профильную часть<br></br>ЕГЭ бесплатно.</p>
+         <p className="base-part-notes">•Задания из новейших учебников<br></br>и решебников.
+         <br></br><br></br>
+         •Разбор задач с объяснениями.
+         <br></br><br></br>
+         •Рисунки, а также пошаговые схемы.
+         <br></br><br></br>
+         •Интерактив виде досок и гиф-картинок.
+         </p>
+         <p className="try-now-text">Попробуйте прямо сейчас!</p>
+
+
+         <p className="profile-part-notes">•Задания из новейших учебников<br></br>и решебников.
+         <br></br><br></br>
+         •Разбор  с объяснениями.
+         <br></br><br></br>
+         •Рисунки, а также пошаговые схемы.
+         <br></br><br></br>
+         •Интерактив виде досок и гиф-картинок.
+         </p>
+         <p className="try-now-text2">Попробуйте прямо сейчас!</p>
         </>
     )
 }

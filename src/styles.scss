@@ -64,11 +64,21 @@ body {
 }
 
 .calc {
+  display: inline-block;
   position:absolute;
   top:200px;
   right: 290px;
   border: #fdffec;
+  cursor: pointer;
+  transition: filter 0.2s;
 }
+
+.calc:hover {
+  filter: brightness(1.2); 
+  border-radius: 8px;
+  filter: drop-shadow(0 0 20px #38add4);
+}
+
 
 .myCustomLink {
   position:relative;
@@ -242,7 +252,7 @@ body {
 }
 
 .normal-text {
-  font-size: 24px;
+    font-size: 24px;
     font-family: 'Verdana';
     color: #cce5ff;
     position:absolute;
@@ -250,7 +260,16 @@ body {
     left: 80px;
 }
 
-.table {
+.normal-text2 {
+    font-size: 20px;
+    font-family: 'Verdana';
+    color: #3c536d;
+    position:absolute;
+    top: 1400px;
+    left: 80px;
+}
+
+.table_ {
   position:absolute;
   top: 560px;
   left: 130px;
@@ -303,12 +322,12 @@ body {
 }
 
 .base-part-notes{
-  font-size: 24px;
+    font-size: 24px;
     font-weight: bold;
     font-family: 'Verdana';
     color: #ffffff;
     position:absolute;
-    top: 770px;
+    top: 790px;
     left: 320px;
 
       opacity: 0;
@@ -325,12 +344,12 @@ body {
 }
 
 .profile-part-notes{
-  font-size: 24px;
+    font-size: 24px;
     font-weight: bold;
     font-family: 'Verdana';
     color: #ffffff;
     position:absolute;
-    top: 770px;
+    top: 790px;
     left: 1100px;
 
       opacity: 0;
@@ -344,4 +363,38 @@ body {
     opacity: 1;
     transform: translateY(0); 
   }
+}
+
+.try-now-text {
+    font-size: 38px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: "Trebuchet MS";
+    color: #cee5fd;
+    position:absolute;
+    top: 1100px;
+    left: 320px;
+    text-align: center;
+
+      opacity: 0;
+  transform: translateY(-20px);
+  
+  animation: textAppear 2.0s ease forwards;
+}
+
+.try-now-text2 {
+    font-size: 38px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: "Trebuchet MS";
+    color: #cee5fd;
+    position:absolute;
+    top: 1100px;
+    left: 1100px;
+    text-align: center;
+
+      opacity: 0;
+  transform: translateY(-20px);
+  
+  animation: textAppear 2.0s ease forwards;
 }
