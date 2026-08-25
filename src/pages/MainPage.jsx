@@ -11,7 +11,6 @@ function TasksPage() {
 
 export default TasksPage; */
 
-import { Link } from "../Router"; 
 import BubbleTop from "../components/BubbleEffectsTop";
 import BubbleBottom from "../components/BubbleEffectsBottom";
 import ImageLightUp from "../components/CalculatorImage";
@@ -20,7 +19,7 @@ import Header from "../components/Header";
 import SearchForm from "../components/SearchForm";
 import Table from "../components/Table";
 
-function TasksPage() {
+function MainPage() {
   return (
     <div className="main-page-wrapper">
       {/* Фоновые пузыри создаются только для этой страницы */}
@@ -33,13 +32,8 @@ function TasksPage() {
       <Header />
       <SearchForm />
       <Table />
-
-      <div style={{ marginTop: '20px' }}>
-        <Link to="/tasks/123" className="myCustomLink">БАЗА</Link>
-        <li><Link to="/tasks/123" className="myCustomLink1">ПРОФИЛЬ</Link></li>
-      </div>
     </div>
   );
 }
 
-export default TasksPage;
+export default MainPage;

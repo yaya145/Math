@@ -84,8 +84,8 @@ export default Router; */
 
 
 import { useState, useEffect } from "react";
-import TasksPage from "./pages/TasksPage"; 
-import TaskPage1 from "./pages/TaskPage1"; // Оставил один импорт, так как пути вели на один файл
+import MainPage from "./pages/MainPage"; 
+import CalculatorPage from "./pages/CalculatorPage"; // Оставил один импорт, так как пути вели на один файл
 
 // 1. Кастомный компонент ссылки
 export const Link = ({ to, children, ...props }) => {
@@ -111,10 +111,10 @@ const Router = () => {
   // Уникальный key={path} теперь привязан жестко к каждому тегу.
   switch (path) {
     case '/':
-      return <TasksPage key={path} />;
+      return <MainPage key={path} />;
       
-    case '/tasks/123':
-      return <TaskPage1 key={path} />;
+    case '/calculator':
+      return <CalculatorPage key={path} />;
       
     default:
       // Наша 404 страница

@@ -1,7 +1,14 @@
+import { Link } from "../Router";
+
 function Table() {
     return (
         <>
          <img src= "src/assets/table_.webp" className="table_"/>
+
+         <div style={{ marginTop: '20px' }}>
+         <Link to="/tasks/123" className="myCustomLink">БАЗА</Link>
+         <li><Link to="/tasks/123" className="myCustomLink1">ПРОФИЛЬ</Link></li>
+         </div>
 
          <p className="base-part-description">Изучайте базовую часть<br></br>ЕГЭ бесплатно.</p>
          <p className="profile-part-description">Изучайте профильную часть<br></br>ЕГЭ бесплатно.</p>
@@ -12,7 +19,7 @@ function Table() {
          <br></br><br></br>
          •Рисунки, а также пошаговые схемы.
          <br></br><br></br>
-         •Интерактив виде досок и гиф-картинок.
+         •Интерактив в виде досок и гиф-картинок.
          </p>
          <p className="try-now-text">Попробуйте прямо сейчас!</p>
 
@@ -23,7 +30,7 @@ function Table() {
          <br></br><br></br>
          •Рисунки, а также пошаговые схемы.
          <br></br><br></br>
-         •Интерактив виде досок и гиф-картинок.
+         •Интерактив в виде досок и гиф-картинок.
          </p>
          <p className="try-now-text2">Попробуйте прямо сейчас!</p>
         </>
