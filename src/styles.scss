@@ -18,49 +18,38 @@ body {
   color: rgb(0, 0, 0);
 }
 
-/* Контейнер для выравнивания */
 .search-container {
   position:absolute;
   top: 30px;
   right: 70px;
 }
 
-/* Стилизация самого поля ввода */
 .search-input {
   padding: 7px 15px;
   width: 300px;
   border: 2px solid #ccc;
-  /* Рамка */
   border-radius: 20px 0 0 20px;
-  /* Скругление слева */
   outline: none;
-  /* Убрать стандартную обводку */
   font-size: 16px;
   transition: all 0.3s;
 }
 
-/* Эффект при фокусе */
 .search-input:focus {
     background-color: rgb(236, 236, 236);
-  /* Цвет при клике */;
 }
 
-/* Стилизация кнопки */
 .search-button {
   padding: 10px 20px;
   background-color: #21262b;
-  /* Цвет фона */
   color: white;
   border: none;
   border-radius: 0 2px 20px 0;
-  /* Скругление справа */
   cursor: pointer;
   font-size: 16px;
 }
 
 .search-button:hover {
   background-color: #818181;
-  /* Цвет при наведении */;
 }
 
 .calc {
@@ -82,7 +71,7 @@ body {
 
 .myCustomLink {
   position:relative;
-  top: 570px;
+  top: 590px;
   left: 460px;
   color: #ffffff; 
   font-size: 52px; 
@@ -108,7 +97,7 @@ body {
 
 .myCustomLink1 {
   position:relative;
-  top: 510px;
+  top: 530px;
   left: 1230px;
   color: #ffffff;
   font-size: 52px; 
@@ -148,7 +137,6 @@ body {
     animation-timing-function: linear; 
 } 
 
-/* 3. Траектория автоматического движения */
 @keyframes smoothFloat {
   0% {
     transform: translate(0, 7) rotate(0deg);
@@ -172,16 +160,15 @@ body {
     animation-timing-function: linear; 
 }
 
-/* 3. Траектория автоматического движения */
 @keyframes smoothFloat {
   0% {
     transform: translate(0, 0) rotate(0deg);
   }
   50% {
-    transform: translate(-700px, -50px) rotate(-3deg); /* Влево и еще выше */
+    transform: translate(-700px, -50px) rotate(-3deg); 
   }
   100% {
-    transform: translate(0, 0) rotate(0deg);        /* Плавный возврат обратно */
+    transform: translate(0, 0) rotate(0deg);      
   }
 }
 
@@ -189,16 +176,16 @@ body {
   position:absolute;
   top: 170px;
   left: 230px;
-    /* Начальное состояние: картинка полностью скрыта сверху */
+    /* начальное состояние: картинка полностью скрыта сверху */
   clip-path: inset(0 0 100% 0);
   
-  /* Имя анимации, длительность (2s) и задержка (0.5s) */
+  /* имя анимации, длительность (2s) и задержка (0.5s) */
   animation: revealDown 2s ease forwards 0.5s;
 }
 
 @keyframes revealDown {
   to {
-    /* Финальное состояние: картинка полностью открыта */
+    /* финальное состояние: картинка полностью открыта */
     clip-path: inset(0 0 0 0);
   }
 }
@@ -212,11 +199,9 @@ body {
     top: 200px;
     left: 350px;
 
-      /* Начальное состояние: прозрачный и смещен на 20px вверх */
   opacity: 0;
   transform: translateY(-20px);
   
-  /* Анимация: 1.5 секунды, плавный старт/конец, фиксация результата */
   animation: textAppear 1.5s ease forwards;
 }
 
@@ -236,18 +221,16 @@ body {
     top:310px;
     left:350px;
 
-          /* Начальное состояние: прозрачный и смещен на 20px вверх */
   opacity: 0;
   transform: translateY(-20px);
-  
-  /* Анимация: 1.5 секунды, плавный старт/конец, фиксация результата */
+
   animation: textAppear 1.5s ease forwards;
 }
 
 @keyframes textAppear {
   to {
     opacity: 1;
-    transform: translateY(0); /* Возврат на исходное место */
+    transform: translateY(0); 
   }
 }
 
@@ -397,4 +380,37 @@ body {
   transform: translateY(-20px);
   
   animation: textAppear 2.0s ease forwards;
+}
+
+.up-calculator-line {
+  position: absolute;
+  font-family: 'Courier New', Courier, monospace;
+  top: 500px;
+  left:800px;
+  transform: scale(4);
+  
+}
+
+.down-calculator-line {
+  position: absolute;
+  font-family: 'Courier New', Courier, monospace;
+  top: 600px;
+  left:800px;
+  transform: scale(4);
+}
+
+.calculator-input {
+  position: absolute;
+  font-family: 'Courier New', Courier, monospace;
+  top: 700px;
+  left:800px;
+  transform: scale(4);
+}
+
+.calculator-answer {
+  position: absolute;    
+  font-family: 'Courier New', Courier, monospace; 
+  top: 350px;  
+  left: 500px;     
+  transform: scale(10);           
 }

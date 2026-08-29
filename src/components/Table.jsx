@@ -1,13 +1,15 @@
 import { Link } from "../Router";
+//import table_ from "..assets/table_.webp";
+
 
 function Table() {
     return (
         <>
-         <img src= "src/assets/table_.webp" className="table_"/>
+         <img src= {"src/assets/table_.webp"} className="table_"/>
 
-         <div style={{ marginTop: '20px' }}>
+         <div>
          <Link to="/tasks/123" className="myCustomLink">БАЗА</Link>
-         <li><Link to="/tasks/123" className="myCustomLink1">ПРОФИЛЬ</Link></li>
+         <div><Link to="/tasks/123" className="myCustomLink1">ПРОФИЛЬ</Link></div>
          </div>
 
          <p className="base-part-description">Изучайте базовую часть<br></br>ЕГЭ бесплатно.</p>
