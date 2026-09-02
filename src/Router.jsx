@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import MainPage from "./pages/MainPage"; 
 import CalculatorPage from "./pages/CalculatorPage";
+import BasePage from "./pages/BasePage";
+import ProfilePage from "./pages/ProfilePage";
 
 export const Link = ({ to, children, ...props }) => {
   const handleClick = (e) => {
@@ -27,6 +29,12 @@ const Router = () => {
       
     case '/calculator':
       return <CalculatorPage key={path} />;
+
+    case '/base-segment':
+      return <BasePage key={path} />;
+
+    case '/profile-segment':
+      return <ProfilePage key={path} />;
       
     default:
       return <div key="404">404 Страница не найдена :з</div>;

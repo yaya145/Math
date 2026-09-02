@@ -382,8 +382,17 @@ body {
   animation: textAppear 2.0s ease forwards;
 }
 
+/*.container-calculator{
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  background-color: #4CAF50;
+ 
+}
+
 .up-calculator-line {
   position: absolute;
+  color:#fa580d;
   font-family: 'Courier New', Courier, monospace;
   top: 500px;
   left:800px;
@@ -395,7 +404,7 @@ body {
   position: absolute;
   font-family: 'Courier New', Courier, monospace;
   top: 600px;
-  left:800px;
+  left: 800px;
   transform: scale(4);
 }
 
@@ -408,9 +417,104 @@ body {
 }
 
 .calculator-answer {
+  color: #69b6ff;
   position: absolute;    
   font-family: 'Courier New', Courier, monospace; 
   top: 350px;  
   left: 500px;     
   transform: scale(10);           
+} */
+
+/* Основной контейнер */
+.container-calculator {
+  background-color: #1c1c1e;
+  padding: 20px;
+  border-radius: 20px;
+  width: 900px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+  top:250px;
+  position: absolute;
+  left:450px;
 }
+
+/* Экран ответа */
+.calculator-answer {
+  color: #ffffff;
+  font-size: 2rem;
+  text-align: left;
+  margin-bottom: 15px;
+  padding: 10px;
+  min-height: 40px;
+  font-size: 90px;
+}
+
+/* Сетки для кнопок */
+.up-calculator-line, .down-calculator-line {
+  display: block;
+  grid-template-columns: repeat(5, 2fr); /* Делаем ровную сетку по 4 кнопки */
+  width:800px;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Общие стили для всех кнопок */
+.calc-btn {
+  border: none;
+  border-radius: 50%; /* Круглые кнопки */
+  height: 80px;
+  width: 80px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.calc-btn:hover {
+  filter: brightness(1.2); /* Эффект при наведении */
+}
+
+/* ПОКРАСКА ПО КАТЕГОРИЯМ */
+
+/* Цифры - светло-серые */
+.btn-digit {
+  background-color: white;
+  color: rgb(0, 153, 255);
+}
+
+/* Скобки - темно-серые */
+.btn-bracket {
+  background-color:rgb(85, 104, 116);
+  color: rgb(255, 255, 255);
+}
+
+/* Операторы (+, -, *, /) - оранжевые */
+.btn-operator {
+  background-color:rgb(85, 104, 116);
+  color: rgb(255, 255, 255);
+}
+
+/* Кнопка ввода/равно - зеленая */
+.btn-equal {
+  background-color: #52868a;
+  color: white;
+  border-radius: 10px; /* Делаем её чуть прямоугольной для инпута */
+  height: 40px;
+  width: 50px;
+}
+
+/* Поле ввода */
+.calculator-input {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.calculator-input input {
+  flex: 1;
+  background-color: #2c2c2e;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+  font-size: 1.1rem;
+}
+

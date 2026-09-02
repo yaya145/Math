@@ -8,8 +8,8 @@ function Table() {
          <img src= {"src/assets/table_.webp"} className="table_"/>
 
          <div>
-         <Link to="/tasks/123" className="myCustomLink">БАЗА</Link>
-         <div><Link to="/tasks/123" className="myCustomLink1">ПРОФИЛЬ</Link></div>
+         <Link to="/base-segment" className="myCustomLink">БАЗА</Link>
+         <div><Link to="/profile-segment" className="myCustomLink1">ПРОФИЛЬ</Link></div>
          </div>
 
          <p className="base-part-description">Изучайте базовую часть<br></br>ЕГЭ бесплатно.</p>

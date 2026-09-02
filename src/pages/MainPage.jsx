@@ -6,7 +6,7 @@ import Header from "../components/Header";
 import SearchForm from "../components/SearchForm";
 import Table from "../components/Table";
 
-function MainPage() {
+const MainPage = () => {
   return (
     <div>
       <BubbleTop />

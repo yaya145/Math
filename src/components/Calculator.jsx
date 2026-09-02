@@ -1,84 +1,10 @@
-/*import React, { useState } from 'react';
+import React, { useState } from 'react'; // Исправлено: добавлен импорт useState
 
-
-export default function MyCalculator() {
-  // 1. Создаем состояния для инпута и для ответа
-  const [inputValue, setInputValue] = useState('');
-  const [answer, setAnswer] = useState('');
-
-  // 2. Функция для добавления символов (цифр и знаков) при клике
-  const handleButtonClick = (symbol) => {
-    setInputValue((prev) => prev + symbol);
-  };
-
-  // 3. Функция для расчета (срабатывает при нажатии на ↵)
-  const handleCalculate = () => {
-    try {
-      // Заменяем x^x (если ввели через кнопку) на ** для JS, если нужно
-      // Но пока сделаем простой расчет
-      const result = new Function(`return ${inputValue}`)();
-      setAnswer(result.toString());
-    } catch (error) {
-      setAnswer('Ошибка');
-    }
-  };
-
-  return (
-    <>
-
-      <div className="calculator-answer">
-        <output>{answer || '0'}</output>
-      </div>
-
-
-      <div className="up-calculator-line">
-        <button onClick={() => handleButtonClick('(')}> ( </button>
-        <button onClick={() => handleButtonClick(')')}> ) </button>
-        <button onClick={() => handleButtonClick('[')}> [ </button>
-        <button onClick={() => handleButtonClick(']')}> ] </button>
-        <button onClick={() => handleButtonClick('+')}> + </button>
-        <button onClick={() => handleButtonClick('-')}> - </button>
-        <button onClick={() => handleButtonClick('*')}> * </button>
-        <button onClick={() => handleButtonClick('/')}> / </button>
-        <button onClick={() => handleButtonClick('%')}> % </button>
-
-        <button onClick={() => handleButtonClick('**')}> x<sup>x</sup> </button>
-      </div>
-
-    
-      <div className="down-calculator-line">
-        <button onClick={() => handleButtonClick('1')}> 1 </button>
-        <button onClick={() => handleButtonClick('2')}> 2 </button>
-        <button onClick={() => handleButtonClick('3')}> 3 </button>
-        <button onClick={() => handleButtonClick('4')}> 4 </button>
-        <button onClick={() => handleButtonClick('5')}> 5 </button>
-        <button onClick={() => handleButtonClick('6')}> 6 </button>
-        <button onClick={() => handleButtonClick('7')}> 7 </button>
-        <button onClick={() => handleButtonClick('8')}> 8 </button>
-        <button onClick={() => handleButtonClick('9')}> 9 </button>
-        <button onClick={() => handleButtonClick('0')}> 0 </button>
-      </div>
-
-
-      <div className="calculator-input">
-        <input 
-          value={inputValue} 
-          onChange={(e) => setInputValue(e.target.value)} 
-          placeholder="0"
-        />
-        <button onClick={handleCalculate}> ↵ </button>
-      </div>
-    </>
-  );
-} */
-
-import React, { useState } from 'react';
 
 export default function MyCalculator() {
   const [inputValue, setInputValue] = useState('');
   const [answer, setAnswer] = useState('');
 
-  // 1. Создаем массивы с символами для кнопок
   const upperSymbols = ['(', ')', '[', ']', '+', '-', '*', '/', '%', '**'];
   const digits = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 
@@ -88,33 +14,50 @@ export default function MyCalculator() {
 
   const handleCalculate = () => {
     try {
+      // Безопаснее использовать Function, чем eval, но в будущем логику лучше заменить
       const result = new Function(`return ${inputValue}`)();
-      setAnswer(result.toString());
+      setAnswer(result !== undefined ? result.toString() : '0');
     } catch (error) {
       setAnswer('Ошибка');
     }
   };
 
+  // Функция для динамического присвоения классов кнопкам
+  const getButtonClass = (symbol) => {
+    if (['+', '-', '*', '/', '%', '**'].includes(symbol)) {
+      return 'btn-operator'; // Класс для математических знаков
+    }
+    if (['(', ')', '[', ']'].includes(symbol)) {
+      return 'btn-bracket'; // Класс для скобок
+    }
+    return 'btn-digit'; // Класс для цифр
+  };
+
   return (
-    <>
+    <div className='container-calculator'>
       <div className="calculator-answer">
-        <output>{answer || '0'}</output>
+        <output>{answer || '328'}</output>
       </div>
 
-      {/* 2. Превращаем массив верхних символов в кнопки */}
       <div className="up-calculator-line">
         {upperSymbols.map((symbol) => (
-          <button key={symbol} onClick={() => handleButtonClick(symbol)}>
-            {/* Если символ '**', красиво отобразим его как степень */}
+          <button 
+            key={symbol} 
+            className={`calc-btn ${getButtonClass(symbol)}`} // Применяем классы
+            onClick={() => handleButtonClick(symbol)}
+          >
             {symbol === '**' ? <>x<sup>x</sup></> : symbol}
           </button>
         ))}
       </div>
 
-      {/* 3. Превращаем массив цифр в кнопки */}
       <div className="down-calculator-line">
         {digits.map((digit) => (
-          <button key={digit} onClick={() => handleButtonClick(digit)}>
+          <button 
+            key={digit} 
+            className={`calc-btn btn-digit`} // Применяем класс цифр
+            onClick={() => handleButtonClick(digit)}
+          >
             {digit}
           </button>
         ))}
@@ -126,9 +69,10 @@ export default function MyCalculator() {
           onChange={(e) => setInputValue(e.target.value)} 
           placeholder="0"
         />
-        <button onClick={handleCalculate}> ↵ </button>
+        {/* Кнопка "Равно" вынесена отдельно, ей даем свой яркий класс */}
+        <button className="calc-btn btn-equal" onClick={handleCalculate}> ↵ </button>
       </div>
-    </>
+    </div>
   );
 }
 
