@@ -1,5 +1,8 @@
-allowBuilds:
-  '@parcel/watcher': true
+packages:
+  - '.'
 
-  overrides:
-  nanoid: ^5.1.16
+allowBuilds:
+  '@parcel/watcher': set this to true or false
+
+overrides:
+  source-map-js: '^1.2.2'
